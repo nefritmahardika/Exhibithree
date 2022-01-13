@@ -1,0 +1,127 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    font-family: helvetica;
+    color:  rgb(25, 0, 255);
+    background-color: rgb(250, 238, 223);
+}
+@font-face {
+    font-family: Helvetica;
+    src: url("") format("")
+}
+
+.title img{
+    width: 60px;
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0;
+    align-items: center;
+    
+}
+nav ul {
+     display:flex;
+    width: 40%;
+    color: rgb(25, 0, 255);
+    justify-content: space-between;
+    list-style: none;
+    
+}
+nav ul li a{
+    color: rgb(25, 0, 255);
+    font-weight: 600;
+    transition: 0.5s;
+}
+nav ul li a:hover{
+    color: rgb(102, 102, 102);
+    transition: 0.5s;
+}
+.hamburger{
+    display: none;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    position: relative;
+}
+.hamburger input{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    opacity: 0;
+    cursor: pointer;
+    left: -7px;
+    top: -12px;
+    z-index: 99;
+}
+.hamburger span{
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 30px;
+    transition: all 0.5s;
+}
+
+.hamburger span:nth-child(2){
+    transform-origin: 0 0;
+}
+.hamburger span:nth-child(4){
+    transform-origin: 0 100%;
+}
+
+.hamburger input:checked ~ span:nth-child(2){
+    transform: rotate(45deg) translate(-1px, -1px);
+}
+.hamburger input:checked ~ span:nth-child(4){
+    transform: rotate(-45deg) translate(-1px, 0);
+}
+.hamburger input:checked ~ span:nth-child(3){
+    opacity: 0;
+    transform: rotate(-45deg) translate(-1px, 0);
+}
+
+.judul {
+text-align: center;
+font-size: 40px;
+margin-top: 150px;
+}
+.judul h1{
+    color: rgb(25, 0, 255);
+    letter-spacing: -9px;
+}
+.desc{
+    text-align: center;
+    margin: auto;
+    width: 60%;
+    margin-top: 20px;
+}
+.desc p{
+    font-weight: 100;
+    letter-spacing: -1.5px;
+}
+
+.logo ul{
+    list-style: none;
+    flex-direction: row;
+    text-align: center;
+    margin: 0 auto;
+
+    
+}
+
+.logo ul li {
+    margin-top: 80px;
+        display: inline-flex;
+        padding: 30px;
+        justify-content: space-around;
+}
+
+.copyright p{
+    bottom: 0;
+    text-align: center;
+    letter-spacing: -2px;
+    
+}
